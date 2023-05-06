@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import Pintalk from 'pintalk-npm-package';
+import React from 'react';
+import styled from 'styled-components';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div style={{backgroundColor: '#EBF3FB', height: '100%'}}>
+        <div id="widget-space"></div>
+        <WidgetBox>
+          <Pintalk accessKey={'IfFBGulFS5Sl4mwj3wgIJA'} secretKey={'4248986161a492685b944f2764715215e85b4ab8b1359b558ad32d6756b6e6ac'} theme={'basic'}/>
+        </WidgetBox>
+      </div>
   );
 }
+
+const WidgetBox = styled.div`
+  position: absolute; 
+  right: 0px; 
+  bottom: 0px; 
+  width: 100px; 
+  height: 100px;
+    
+`
 
 export default App;
